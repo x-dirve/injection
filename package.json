@@ -1,0 +1,40 @@
+{
+    "name": "@x-drive/injection",
+    "version": "1.0.0",
+    "description": "XLab 用的文件内入注入模块",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/x-drive/injection.git"
+    },
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/x-drive/injection/issues"
+    },
+    "homepage": "https://github.com/x-drive/injection#readme",
+    "scripts": {
+        "dev": "swc src -D ./src/bin  --config-file .swcrc -d dist -w",
+        "compile": "swc src -D ./src/bin --config-file .swcrc -d dist",
+        "build": "yarn compile && yarn gen-declaration",
+        "gen-declaration": "tsc --emitDeclarationOnly"
+    },
+    "main": "./dist/index.js",
+    "types": "./dist/index.d.ts",
+    "dependencies": {
+        "@x-drive/utils": "1.1.24"
+    },
+    "devDependencies": {
+        "tslib": "2.3.0",
+        "chokidar": "3.5.3",
+        "@swc/cli": "0.1.57",
+        "typescript": "4.3.4",
+        "@swc/core": "1.2.171",
+        "@types/koa": "2.13.5",
+        "@x-9lab/xlab": "^1.4.1",
+        "@types/node": "16.11.40",
+        "@x-drive/changelog": "1.1.6"
+    },
+    "files": [
+        "dist"
+    ]
+}
